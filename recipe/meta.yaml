@@ -1,5 +1,5 @@
 {% set name = "pyaerocom" %}
-{% set version = "0.8.0" %}
+{% set version = "0.10.0rc1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 694ef61878d600e4a05e66d13e4d1493e5156012376b6dac780c72781e47a873
+  sha256: 131babf09289637fd07fa6eb0483133d9477e5521253ab1239b8575d9847db28
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pyaeroeval=pyaerocom.web.cli.main_aerocom_evaluation:main
     - pyaerotrends=pyaerocom.web.cli.main_trends_evaluation:main
@@ -26,15 +26,17 @@ requirements:
     - iris >=2.1.0
     - xarray >=0.10.8
     - cartopy >=0.16.0
-    - matplotlib !=3.1.1
+    - matplotlib >=3.1.1
     - scipy >=1.3.1
     - pandas >=0.23.0
     - seaborn >=0.8.0
     - netcdf4
     - geonum
-    - cf_units
     - numpy
     - simplejson
+    - requests
+    - reverse-geocode
+    - tqdm
 
 test:
   imports:
