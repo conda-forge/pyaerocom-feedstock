@@ -10,7 +10,7 @@ source:
   sha256: 131babf09289637fd07fa6eb0483133d9477e5521253ab1239b8575d9847db28
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pyaeroeval=pyaerocom.web.cli.main_aerocom_evaluation:main
     - pyaerotrends=pyaerocom.web.cli.main_trends_evaluation:main
@@ -22,6 +22,7 @@ requirements:
     - pip
     - python >=3.5
   run:
+    - python >=3.5
     - iris >=2.1.0
     - xarray >=0.10.8
     - cartopy >=0.16.0
