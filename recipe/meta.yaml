@@ -1,5 +1,5 @@
 {% set name = "pyaerocom" %}
-{% set version = "0.10.0rc1" %}
+{% set version = "0.10.0rc2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 131babf09289637fd07fa6eb0483133d9477e5521253ab1239b8575d9847db28
+  sha256: ba87bd342b84509746a2bd528e449ebdda9f0448f32422208abe1aed3de3370d
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - pyaeroeval=pyaerocom.web.cli.main_aerocom_evaluation:main
     - pyaerotrends=pyaerocom.web.cli.main_trends_evaluation:main
