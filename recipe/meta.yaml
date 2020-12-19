@@ -1,5 +1,5 @@
 {% set name = "pyaerocom" %}
-{% set version = "0.10.0rc2" %}
+{% set version = "0.10.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ba87bd342b84509746a2bd528e449ebdda9f0448f32422208abe1aed3de3370d
+  sha256: 73af923dc4b63e5348781609dd91ccbe883f75884e3a815e6628f6b093a51eab
 
 build:
   number: 0
