@@ -1,5 +1,5 @@
 {% set name = "pyaerocom" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 73af923dc4b63e5348781609dd91ccbe883f75884e3a815e6628f6b093a51eab
+  sha256: 32ea2abdf117975b8b4543da17c4997aba10886fa00a9d4fe7dd054705aa2d6f
 
 build:
   number: 0
@@ -20,17 +20,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
-    - python >=3.5
-    - iris >=2.1.0
-    - xarray >=0.10.8
+    - python >=3.6
+    - iris >=2.1.0, <3.0.0
+    - xarray >=0.16.0
     - cartopy >=0.16.0
     - matplotlib >=3.1.1
     - scipy >=1.3.1
-    - pandas >=0.23.0
+    - pandas >=0.23.0, <=1.2.2
     - seaborn >=0.8.0
-    - netcdf4
     - geonum
     - numpy
     - simplejson
@@ -52,7 +51,7 @@ about:
   license_family: GPL
   license_file: LICENSE
   summary: Python tools for the AeroCom project
-  doc_url: https://pyaerocom.met.no/
+  doc_url: https://pyaerocom.readthedocs.io/en/latest/
   dev_url: https://github.com/metno/pyaerocom
 
 extra:
