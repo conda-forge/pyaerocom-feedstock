@@ -11,7 +11,7 @@ Summary: Python tools for the AeroCom project
 
 Development: https://github.com/metno/pyaerocom
 
-Documentation: https://pyaerocom.met.no/
+Documentation: https://pyaerocom.readthedocs.io/en/latest/
 
 Current build status
 ====================
