@@ -1,12 +1,9 @@
-{% set name = "pyaerocom" %}
-{% set version = "0.12.0" %}
-
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: pyaerocom
+  version: 0.12.0
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-0.12.0.tar.gz
   sha256: 555a4b4ccd26a0facee6f4303bcf95db4fcfd830fd717ab321083099e632ffd4
 
 build:
