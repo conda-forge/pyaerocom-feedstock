@@ -1,10 +1,10 @@
 package:
   name: pyaerocom
-  version: 0.12.0
+  version: 0.12.1rc1
 
 source:
-  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-0.12.0.tar.gz
-  sha256: 555a4b4ccd26a0facee6f4303bcf95db4fcfd830fd717ab321083099e632ffd4
+  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-0.12.1rc1.tar.gz
+  sha256: b6b41fe9afffeea7a579b2d881b58f5242d7bd3668caf6144d8aaebfb02fbae7
 
 build:
   number: 0
