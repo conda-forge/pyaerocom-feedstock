@@ -43,7 +43,7 @@ test:
   commands:
     - pwd
     - ls
-    - pytest tests/
+    - pytest $SRC_DIR/tests/
 
 about:
   home: https://github.com/metno/pyaerocom.git
