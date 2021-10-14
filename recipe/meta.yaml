@@ -1,13 +1,13 @@
 {% set name = "pyaerocom" %}
-{% set version = "0.11.1" %}
+{% set version = "0.12.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10ae8bc77c6270d28428614704e76c5ca64b688064bd08ddf12b9f9c2704fda2
+  sha256: 555a4b4ccd26a0facee6f4303bcf95db4fcfd830fd717ab321083099e632ffd4
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
     - pyaeroeval=pyaerocom.web.cli.main_aerocom_evaluation:main
     - pyaerotrends=pyaerocom.web.cli.main_trends_evaluation:main
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
   host:
@@ -37,8 +37,8 @@ requirements:
     - reverse-geocode
     - tqdm
     - openpyxl
-    - nbsphinx 
-    
+    - nbsphinx
+
 test:
   imports:
     - pyaerocom
