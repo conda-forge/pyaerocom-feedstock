@@ -12,7 +12,7 @@ source:
 build:
     number: 0
   entry_points:
-    pya=pyaerocom.scripts.cli:main
+    - pya=pyaerocom.scripts.cli:main
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
