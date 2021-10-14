@@ -33,8 +33,6 @@ requirements:
     - reverse-geocode
     - tqdm
     - openpyxl
-    - pip:
-      - geojsoncontour
 
 test:
   imports:
