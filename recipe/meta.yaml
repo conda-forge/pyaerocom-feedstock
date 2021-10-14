@@ -41,7 +41,7 @@ test:
     - pytest
     - pytest-dependency
   commands:
-    - pytest tests
+    - pytest tests/
 
 about:
   home: https://github.com/metno/pyaerocom.git
