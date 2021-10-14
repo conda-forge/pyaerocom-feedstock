@@ -1,5 +1,5 @@
 {% set name = "pyaerocom" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 32ea2abdf117975b8b4543da17c4997aba10886fa00a9d4fe7dd054705aa2d6f
+  sha256: 10ae8bc77c6270d28428614704e76c5ca64b688064bd08ddf12b9f9c2704fda2
 
 build:
   number: 0
@@ -20,15 +20,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
-    - python >=3.6
-    - iris >=2.1.0, <3.0.0
+    - python >=3.8
+    - iris >=2.1.0, <3.1.0
     - xarray >=0.16.0
     - cartopy >=0.16.0
-    - matplotlib >=3.1.1
-    - scipy >=1.3.1
-    - pandas >=0.23.0, <=1.2.2
+    - matplotlib >=3.0.1
+    - scipy >=1.1.0
+    - pandas >=0.23.0
     - seaborn >=0.8.0
     - geonum
     - numpy
@@ -36,7 +36,9 @@ requirements:
     - requests
     - reverse-geocode
     - tqdm
-
+    - openpyxl
+    - nbsphinx 
+    
 test:
   imports:
     - pyaerocom
@@ -56,4 +58,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - avaldebe
     - jgliss
+    - jgriesfeller
