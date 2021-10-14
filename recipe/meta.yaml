@@ -39,8 +39,9 @@ test:
     - pyaerocom
   requires:
     - pytest
+    - pytest-dependency
   commands:
-    - py.test --pyargs pyaerocom
+    - pytest tests
 
 about:
   home: https://github.com/metno/pyaerocom.git
