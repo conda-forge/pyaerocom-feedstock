@@ -38,7 +38,7 @@ test:
   imports:
     - pyaerocom
   source_files:
-    - tests/test_colocation.py
+    - tests
   requires:
     - pytest
     - pytest-dependency
