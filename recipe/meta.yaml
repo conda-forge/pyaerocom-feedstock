@@ -10,9 +10,9 @@ source:
   sha256: 555a4b4ccd26a0facee6f4303bcf95db4fcfd830fd717ab321083099e632ffd4
 
 build:
-  number: 0
+    number: 0
   entry_points:
-    - pya=pyaerocom.scripts.cli:main
+    pya=pyaerocom.scripts.cli:main
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
@@ -36,8 +36,6 @@ requirements:
     - reverse-geocode
     - tqdm
     - openpyxl
-    - pip:
-      - geojsoncontour
 
 test:
   imports:
