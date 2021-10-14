@@ -1,10 +1,12 @@
+{% set version = "0.12.1" %}
+
 package:
   name: pyaerocom
-  version: 0.12.1rc1
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-0.12.1rc1.tar.gz
-  sha256: b6b41fe9afffeea7a579b2d881b58f5242d7bd3668caf6144d8aaebfb02fbae7
+  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-{{ version }}.tar.gz
+  sha256: 11d853bb82181e3235cd13c9a663ba4721af9d527910f29efee491e94c9c58d6
 
 build:
   number: 0
@@ -43,7 +45,6 @@ test:
     - pytest
     - pytest-dependency
   commands:
-    - ls
     - pytest tests/
 
 about:
