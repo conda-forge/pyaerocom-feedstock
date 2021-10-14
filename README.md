@@ -120,6 +120,7 @@ Feedstock Maintainers
 =====================
 
 * [@avaldebe](https://github.com/avaldebe/)
+* [@dulte](https://github.com/dulte/)
 * [@jgliss](https://github.com/jgliss/)
 * [@jgriesfeller](https://github.com/jgriesfeller/)
 

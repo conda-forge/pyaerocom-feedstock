@@ -1,21 +1,17 @@
-{% set name = "pyaerocom" %}
-{% set version = "0.11.1" %}
-
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: pyaerocom
+  version: 0.12.1rc1
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10ae8bc77c6270d28428614704e76c5ca64b688064bd08ddf12b9f9c2704fda2
+  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-0.12.1rc1.tar.gz
+  sha256: b6b41fe9afffeea7a579b2d881b58f5242d7bd3668caf6144d8aaebfb02fbae7
 
 build:
   number: 0
   entry_points:
-    - pyaeroeval=pyaerocom.web.cli.main_aerocom_evaluation:main
-    - pyaerotrends=pyaerocom.web.cli.main_trends_evaluation:main
+    - pya=pyaerocom.scripts.cli:main
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  script: "pip install . --no-deps -vv "
 
 requirements:
   host:
@@ -28,7 +24,7 @@ requirements:
     - cartopy >=0.16.0
     - matplotlib >=3.0.1
     - scipy >=1.1.0
-    - pandas >=0.23.0
+    - pandas >=1.3.0
     - seaborn >=0.8.0
     - geonum
     - numpy
@@ -37,15 +33,18 @@ requirements:
     - reverse-geocode
     - tqdm
     - openpyxl
-    - nbsphinx 
-    
+
 test:
   imports:
     - pyaerocom
+  source_files:
+    - tests
   requires:
     - pytest
+    - pytest-dependency
   commands:
-    - py.test --pyargs pyaerocom
+    - ls
+    - pytest tests/
 
 about:
   home: https://github.com/metno/pyaerocom.git
@@ -61,3 +60,4 @@ extra:
     - avaldebe
     - jgliss
     - jgriesfeller
+    - dulte
