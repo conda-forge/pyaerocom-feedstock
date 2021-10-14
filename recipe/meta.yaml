@@ -37,13 +37,14 @@ requirements:
 test:
   imports:
     - pyaerocom
+  source_files:
+    - tests/test_colocation.py
   requires:
     - pytest
     - pytest-dependency
   commands:
-    - pwd
     - ls
-    - pytest $SRC_DIR/tests/
+    - pytest tests/
 
 about:
   home: https://github.com/metno/pyaerocom.git
