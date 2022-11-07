@@ -9,7 +9,7 @@ source:
   sha256: afe779145264fb69f31b71e38b398f491e579bf8687dff6796f4e8f620d4301c
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - pya=pyaerocom.scripts.cli:main
   noarch: python
@@ -39,6 +39,10 @@ requirements:
     - tqdm
     - openpyxl
     - typer >=0.4.0
+## python < 3.10
+    - importlib-metadata >=3.6
+## python < 3.11
+    - tomli >=2.0.1
 
 test:
   imports:
@@ -51,7 +55,7 @@ test:
     - pytest-cov
     - packaging
   commands:
-    - pytest tests/
+    - pytest -Wi tests/
 
 about:
   home: https://github.com/metno/pyaerocom.git
