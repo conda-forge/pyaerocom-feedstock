@@ -9,7 +9,7 @@ source:
   sha256: afe779145264fb69f31b71e38b398f491e579bf8687dff6796f4e8f620d4301c
 
 build:
-  number: 3
+  number: 4
   entry_points:
     - pya=pyaerocom.scripts.cli:main
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - flit-core
-    - python >=3.8
+    - python >=3.8,<3.11
   run:
     - python >=3.8
     - iris >=3.2.0
@@ -43,6 +43,7 @@ requirements:
     - importlib-metadata >=3.6
 ## python < 3.11
     - tomli >=2.0.1
+    - importlib-resources >=5.10
 
 test:
   imports:
