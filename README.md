@@ -1,11 +1,11 @@
-About pyaerocom
-===============
+About pyaerocom-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyaerocom-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/metno/pyaerocom.git
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyaerocom-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python tools for the AeroCom project
 
