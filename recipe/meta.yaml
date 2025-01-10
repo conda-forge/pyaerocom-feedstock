@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyaerocom/pyaerocom-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pyaerocom/pyaerocom-{{ version }}.tar.gz
   sha256: afe779145264fb69f31b71e38b398f491e579bf8687dff6796f4e8f620d4301c
 
 build:
-  number: 5
+  number: 6
   entry_points:
     - pya=pyaerocom.scripts.cli:main
   noarch: python
@@ -19,9 +19,9 @@ requirements:
   host:
     - pip
     - flit-core
-    - python >=3.8,<3.11
+    - python {{ python_min }}
   run:
-    - python >=3.8,<3.11
+    - python >={{ python_min }},<3.11
     - iris >=3.2.0
     - xarray >=0.16.0,!=2022.11.0
     - cartopy >=0.20.0
@@ -54,6 +54,7 @@ test:
     - pytest-dependency
     - pytest-cov
     - packaging
+    - python {{ python_min }}
   commands:
     - pytest -Wi tests/
 
