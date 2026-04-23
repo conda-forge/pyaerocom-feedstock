@@ -13,7 +13,7 @@ build:
   entry_points:
     - pya=pyaerocom.scripts.cli:main
   noarch: python
-  script: "pip install . --no-deps -vv "
+  script: 'pip install . --no-deps -vv '
 
 requirements:
   host:
